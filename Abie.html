@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>abie.js | Reward users for having modern browsers!</title>
+<meta name="description" content="Reward users who have modern browsers in a non-aggressive way! Shun the others and the old ways they browse!">
+<meta name="author" content="Justin Boyd">
+<link rel="start" href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.css" />
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono|Coming+Soon' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="public/abiejs/abieStyles.css" />
+</head>
+<body>
+<div class="header fullScrn cf">
+	<div class="arrows"></div>
+    <div class="abieName comingSoonFont">abie.js</div>
+<!-- Code Snippet-->
+    <div class="exampleCodeCont shadow cf">
+    	<a href="https://github.com/justinboyd/abie.js" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+    	<div class="exampleCode droidFont cf">
+<pre class="droidFont">
+<span class="keyword">abiejs</span>({
+    <span class="keyName">merit</span> : <span class="function">function</span>() {
+        <span class="reserved">alert</span>(<span class="string">'Your browser is awesome!'</span>);
+    },
+    <span class="keyName">demerit</span> : <span class="string">'http://browsehappy.com/'</span>
+});
+</pre>
+        </div><!-- End exampleCode -->
+    </div><!-- End exampleCodeCont -->
+<!-- End Code Snippet -->
+</div><!-- End header -->
+<div class="container cf droidFont">
+	<div class="missedIt">
+        <h1>Did ya miss it?!</h1>
+        <h2>If so...either hover over the corner or refresh the page!</h2>
+    </div>
+	<p class="descr borderTop"><span class="boldFont">abie.js</span> is a non-aggressive way for web developers/designers/masters to <span class="boldFont">reward users</span> for having a modern browser. It's also possible to <span class="boldFont">notify users if they have older browsers.</span></p>
+	<div class="treasure borderTop cf">
+    	<div class="chest floatLeft"></div>
+        <h1 class="treasureDescr comingSoonFont floatLeft">Reward your users for having a modern browser!</h1>
+    </div>
+    <div class="merits borderTop">
+    	<h1 class="comingSoonFont">Create/Build The Reward:</h1>
+        <ul class="meritBoxCont cf">
+        	<li>
+            	<h2>Funny Videos</h2>
+                <div><img src="public/abiejs/creative/funnyvid.png" width="200" height="142" alt="funny video" /></div>
+            </li>
+            <li>
+            	<h2>Memes</h2>
+                <div><img src="public/abiejs/creative/meme.png" width="200" height="169" alt="meme reward" /></div>
+            </li>
+            <li>
+            	<h2>Points</h2>
+                <div class="points"><h1>+100pts<span>!!!</span></h1></div>
+            </li>
+            <li>
+            	<h2>Access</h2>
+                <div class="key"></div>
+            </li>
+        </ul>
+        <h2 class="comingSoonFont">Whatever you think is best for your users!</h2>
+    </div><!-- End merits -->
+    <div class="demerits borderTop">
+    	<h1 class="comingSoonFont">Create/Build How Users Can Update:</h1>
+        <ul class="demeritBoxCont cf">
+        	<li>
+            	<h2>Send users away!</h2>
+                <div class="push">&lt;a href="Go here and update!" target="_NOW!"&gt;</div>
+            </li>
+            <li>
+            	<h2>Tell 'em how it is</h2>
+                <div><img src="public/abiejs/creative/alert.png" width="200" height="112" alt="alert users" /></div>
+            </li>
+            <li>
+            	<h2>Smite with crustacean Zeus!</h2>
+                <div><img src="public/abiejs/creative/crabZeus.png" width="200" height="233" alt="smite with crab zeus" /></div>
+            </li>
+        </ul>
+        <h2 class="comingSoonFont">Let users know they are in the dark ages and that there is a better internet.</h2>
+    </div><!-- End demerits -->
+    <div class="req borderTop">
+        <h1>Requirements</h1>
+        <p>abie is written in <span class="boldFont">pure javascript</span>. Because of this, <span class="boldFont">you will not need a library</span> to run abie.js. This was one of my main goals when developing abie and I wanted to keep this project as open as possible so it can be implemented on any web page!</p>
+    </div>
+    <div class="imp borderTop">
+        <h1>Implementation</h1>
+        <p>To implement abie.js you will need to download the script file from <a href="http://abiejs.com/abie.js" target="_blank">here</a> or you can fork it on <a href="https://github.com/justinboyd/abie.js" target="_blank">GitHub</a></p>
+    	<p>Load the script file in the head of your HTML document.</p>
+        <p>Call to abie in a &lt;script&gt; tag at the bottom of the &lt;body&gt; tag in your HTML document.</p>
+    </div>
+    <div class="api borderTop">
+        <h1>The API</h1>
+        <p>abie.js requires one function:</p>
+        <!-- Code Snippet-->
+<div class="exampleCodeCont cf">
+    	<div class="exampleCode droidFont cf">
+    <pre class="droidFont">
+    <span class="keyword">abiejs</span>(<span class="comment">/* object */</span>);</pre>
+        </div><!-- End exampleCode -->
+    </div><!-- End exampleCodeCont -->
+<!-- End Code Snippet -->
+	<p>abie.js takes an object type argument. <span class="italic">All of the properties of the object are optional!</span></p>
+    <p>Here is an example:</p>
+    <!-- Code Snippet-->
+    <div class="exampleCodeCont cf">
+    	<div class="exampleCode droidFont cf">
+    <pre class="droidFont">
+    <span class="keyword">abiejs</span>({
+    	<span class="keyName">position</span> : <span class="string">'tr',</span>
+        <span class="keyName">width</span> : <span class="number">30</span>,
+        <span class="keyName">height</span> : <span class="number">30</span>,
+        <span class="keyName">merit</span> : <span class="function">function</span>() {
+            <span class="reserved">alert</span>(<span class="string">'Your browser is awesome!'</span>);
+        },
+        <span class="keyName">demerit</span> : <span class="string">'http://browsehappy.com/',</span>
+    	<span class="keyName">meritColor</span> : <span class="string">'blue',</span>
+    	<span class="keyName">demeritColor</span> : <span class="string">'#f00',</span>
+    	<span class="keyName">showTime</span> : <span class="number">3000</span>,
+    	<span class="keyName">content</span> : <span class="string">'abie!',</span>
+    	<span class="keyName">cookie</span> : <span class="bool">true</span>,
+    	<span class="keyName">cookieShowLimit</span> : <span class="number">2</span>,
+        <span class="keyName">cookieExperiation</span> : <span class="string">'none'</span>,
+    	<span class="keyName">flag</span> : <span class="bool">true</span>,
+        <span class="keyName">firefox</span> : <span class="number">4</span>,
+        <span class="keyName">msie</span> : <span class="number">10</span>
+    });
+    </pre>
+        </div><!-- End exampleCode -->
+    </div><!-- End exampleCodeCont -->
+<!-- End Code Snippet -->
+	<div class="apiDescr">
+        <h1>abie's properties</h1>
+        <ul>
+            <li>
+                <p class="underline"><span class="boldFont">position</span> - Data Type: literal string</p>
+                <p class="italic">This is where abie will be positioned on the screen.</p>
+                <ul>
+                    <li>tr - Top-Right Corner (default)</li>
+                    <li>tl - Top-Left Corner</li>
+                    <li>br - Bottom-Right Corner</li>
+                    <li>bl - Bottom-Left Corner</li>
+                </ul>
+            </li>
+            <li>
+            	<p class="underline"><span class="boldFont">width</span> - Data Type: Number</p>
+                <p class="italic">The width of abie&apos;s container.</p>
+            </li>
+            <li>
+            	<p class="underline"><span class="boldFont">height</span> - Data Type: Number</p>
+                <p class="italic">The height of abie&apos;s container.</p>
+            </li>
+            <li>
+            	<p class="underline"><span class="boldFont">merit</span> - Data Type: String | Function</p>
+                <p class="italic">Defines how you can reward your user.</p>
+                <ul>
+                    <li>String - You can pass a string as a link and it will take the user directly to the link you provide.</li>
+                    <li>Function - You can define a function that will run when the user clicks on abie.</li>
+                </ul>
+            </li>
+            <li>
+            	<p class="underline"><span class="boldFont">demerit</span> - Data Type: String | Function</p>
+                <p class="italic">Defines how you can let the user know they need to update the browser they are using.</p>
+                <ul>
+                    <li>String - You can pass a string as a link and it will take the user directly to the link you provide.</li>
+                    <li>Function - You can define a function that will run when the user clicks on abie.</li>
+                </ul>
+            </li>
+            <li>
+            	<p class="underline"><span class="boldFont">meritColor</span> - Data Type: String</p>
+                <p class="italic">Color of container for user when rewarded.</p>
+            </li>
+            <li>
+            	<p class="underline"><span class="boldFont">demeritColor</span> - Data Type: String</p>
+                <p class="italic">Color of container for user when they have a browser that needs updated.</p>
+            </li>
+            <li>
+            	<p class="underline"><span class="boldFont">showTime</span> - Data Type: Number</p>
+                <p class="italic">How long abie will be displayed on the screen in milliseconds.</p>
+            </li>
+            <li>
+            	<p class="underline"><span class="boldFont">content</span> - Data Type: String</p>
+                <p class="italic">This will populate the innerHTML of the abie container.</p>
+            </li>
+            <li>
+            	<p class="underline"><span class="boldFont">cookie</span> - Data Type: Boolean</p>
+                <p class="italic">This will define if you would like to set a cookie for your users. If this is set to <span class="bool">true</span> then you can define a cookie limit and expiration.</p>
+            </li>
+            <li>
+            	<p class="underline"><span class="boldFont">cookieShowLimit</span> - Data Type: Number</p>
+                <p class="italic">The number of times abie should be displayed. Once the limit is met abie will not display until the users browser cookies are cleared.</p>
+                <ul>
+                    <li>The cookie property must be set to <span class="bool">true</span> for this to be enabled.</li>
+                </ul>
+            </li>
+            <li>
+            	<p class="underline"><span class="boldFont">cookieExperiation</span> - Data Type: Number | String</p>
+                <p class="italic">This will set an expiration on the generated cookie.</p>
+                <ul>
+                    <li>Number: The number of days abie will live.</li>
+                    <li>String: <span class="string">'none'</span> - This will allow abie to live forever! Or at least a really long time.</li>
+                </ul>
+            </li>
+            <li>
+            	<p class="underline"><span class="boldFont">flag</span> - Data Type: Boolean</p>
+                <p class="italic">This will define if you would like the container to be styled with a rounded border.</p>
+            </li>
+            <li>
+            	<p class="underline"><span class="boldFont">msie</span> - Data Type: Number</p>
+                <p class="italic">This will define what Internet Explorer browser versions will receive merits. The number equal to and higher than this number will trigger the merit definition.</p>
+                <ul>
+                	<li>Default: <span class="number">9</span></li>
+                </ul>
+            </li>
+            <li>
+            	<p class="underline"><span class="boldFont">firefox</span> - Data Type: Number</p>
+                <p class="italic">This will define what Firefox browser versions will receive merits. The number equal to and higher than this number will trigger the merit definition.</p>
+                <ul>
+                	<li>Default: <span class="number">6</span></li>
+                </ul>
+            </li>
+            <li>
+            	<p class="underline"><span class="boldFont">safari</span> - Data Type: Number</p>
+                <p class="italic">This will define what Google Chrome browser versions will receive merits. The number equal to and higher than this number will trigger the merit definition.</p>
+                <ul>
+                	<li>Default: <span class="number">5</span></li>
+                </ul>
+            </li>
+            <li>
+            	<p class="underline"><span class="boldFont">opera</span> - Data Type: Number</p>
+                <p class="italic">This will define what Google Chrome browser versions will receive merits. The number equal to and higher than this number will trigger the merit definition.</p>
+                <ul>
+                	<li>Default: <span class="number">11</span></li>
+                </ul>
+            </li>
+            <li>
+            	<p class="underline"><span class="boldFont">chrome</span> - Data Type: Number</p>
+                <p class="italic">This will define what Google Chrome browser versions will receive merits. The number equal to and higher than this number will trigger the merit definition.</p>
+                <ul>
+                	<li>Default: <span class="number">8</span></li>
+                </ul>
+            </li>
+        </ul>
+    </div><!-- End apiDescr -->
+	<div class="theIdea borderTop">
+		<h1>The Idea:</h1>
+        <p>I know this just seems like another browser sniffer, but the purpose of this is to help web technology move forward. Technology is moving much faster than its adoption rate and the idea here is to help make that gap a little smaller/slim/sexy.</p>
+        <p>As web developers/designers/masters if we notify our users that they have out of date browsers in a non-aggressive way we can help push technology and innovation forward. They will be able to navigate the internet in a safer and faster atmosphere.</p>
+    	<p>In this industry there are a lot of projects we take on that require backwards compatibility. This will never go away, but maybe we can help push the transition period between old and new technologies to be a little faster. :)</p>
+    </div><!--End api-->
+    <div class="footer borderTop">
+    	Send love/hate mail to this guy --&gt; <a href="http://www.j-boyd.com/" target="_blank">Justin Boyd</a>
+        <a href="https://github.com/justinboyd/abie.js/blob/master/license.txt" target="_blank">License</a>
+    </div>
+</div><!-- End container -->
+<script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+<script type="text/javascript" src="public/abiejs/abie.js"></script>
+<script type="text/javascript">
+	abiejs({
+		position:'tr',
+		width:30,
+		height:30,
+		showTime: 3000,
+		content: '',
+		flag: true,
+		meritColor: 'green',
+		demeritColor: '#f00',
+		cookie: false,
+		cookieShowLimit: 2,
+		cookieExperiation: 'none',
+		merit:function(){alert('Woooooooooooooot! Your browser is AWESOME! You just got yourself some unicorn action!');cornify_add();},
+		demerit: function() {alert("It's dangerous to traverse the internet alone with an old browser! You need to go here."); window.location.href = 'http://browsehappy.com/';}
+		/*(╯°□°）╯︵ ┻━┻　┳━┳ ◡ ヽ(`Д´)ﾉ ┻━┻*/
+	});
+	
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-31938156-5', 'abiejs.com');
+	  ga('send', 'pageview');
+</script>
+
+</body>
+</html>

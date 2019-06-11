@@ -1,0 +1,179 @@
+body {
+	color:#333;
+	margin:0;
+	font-family: 'Droid Sans Mono', Helvetica, Arial, sans-serif;
+	background:url(creative/green_dust_scratch.png) repeat;
+}
+/*Clear Float*/
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+/*Objects*/
+.floatLeft {
+	float:left;
+}
+.boldFont {
+	font-weight:bold;
+}
+.underline {
+	text-decoration:underline;
+}
+.borderTop {
+	border-top:1px solid #333;
+}
+.shadow {
+  -moz-box-shadow:    3px 3px 5px 3px #333;
+  -webkit-box-shadow: 3px 3px 5px 3px #333;
+  box-shadow:         3px 3px 5px 3px #333;
+}
+.keyword {color:#acdbce;}
+.keyName {color:#0F3;}
+.function {color:#999;}
+.reserved {color:#93F;}
+.string {color:#fff;}
+.number {color:#f00;}
+.bool {color:#008fff;}
+.comment {color:#e78442;font-size:15px;}
+.italic {
+	font-style:italic;
+}
+/*Fonts*/
+.droidFont {font-family: 'Droid Sans Mono', Helvetica, Arial, sans-serif;}
+.comingSoonFont {font-family: 'Coming Soon', Helvetica, Arial, cursive;}
+h1.comingSoonFont {font-size:55px;}
+h2.comingSoonFont {font-size:50px;}
+h3.comingSoonFont {font-size:45px;}
+h4.comingSoonFont {font-size:40px;}
+h5.comingSoonFont {font-size:35px;}
+h6.comingSoonFont {font-size:30px;} 
+.header {
+	padding-top:200px;
+}
+.fullScrn {
+	width:100%;
+}
+.arrows {
+	position:absolute;
+	top:0;
+	right:0;
+	width:415px;
+	height:260px;
+	background:url(creative/abieImageMap.png) no-repeat top right;
+}
+.abieName {
+	width:975px;
+	text-align:center;
+	margin:0 auto;
+	font-weight: 400;
+	font-size: 264px;
+}
+.exampleCodeCont  {
+	position:relative;
+	background:#333;
+}
+.exampleCode {
+	width:960px;
+	margin:0 auto;
+	padding:10px 0;
+	color:#fff;
+}
+.header .exampleCodeCont  {
+	margin:50px auto;
+}
+.header .exampleCode {
+	font-size:35px;
+	line-height:45px;
+}
+.container {
+	width:960px;
+	margin:0 auto;
+}
+.missedIt {
+	text-align:center;
+}
+.missedIt h1 {
+	font-size:45px;
+}
+.missedIt h2 {
+	font-size:35px;
+}
+.descr {
+	padding-top:22px;
+	font-size:22px;
+}
+.treasure {
+
+}
+.chest {
+	margin: 75px 0;
+	width: 375px;
+	height: 245px;
+	background: url(creative/abieImageMap.png) no-repeat -75px -260px;
+}
+.treasureDescr {
+	width: 500px;
+	margin: 60px 10px;
+}
+.merits {
+	text-align:center;
+}
+.meritBoxCont {
+	list-style:none;
+}
+.meritBoxCont li {
+	float:left;
+	width:230px;
+}
+.meritBoxCont li .points {
+	margin-top:50px;
+	font-size:20px;
+}
+.meritBoxCont li .points h1 span {
+	letter-spacing:-15px;
+}
+.meritBoxCont li .key {
+	width: 215px;
+	height: 190px;
+	background: url(creative/abieImageMap.png) no-repeat -100px -645px;
+}
+.demerits {
+	text-align:center;
+}
+.demeritBoxCont {
+	list-style:none;
+}
+.demeritBoxCont li {
+	float:left;
+	width:300px;
+}
+.demeritBoxCont li .push {
+	font-size:22px;
+}
+.api pre {
+	margin:0;
+	line-height:25px;
+}
+.apiDescr > ul{
+	list-style:none;
+}
+.apiDescr > ul > li {
+	padding:15px 0;
+}
+.footer {
+	text-align:right;
+	padding-bottom:10px;
+}

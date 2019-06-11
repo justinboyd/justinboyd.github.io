@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+	<link rel="stylesheet" href="styles.css">
+	<style>
+		.everything * {
+			border: 2px solid #00B5FF;
+		}
+		.identifier #yeungling {
+			border: 2px solid #00B5FF;
+		}
+		.collection .water {
+			border: 2px solid #00B5FF;
+		}
+		.elem ul {
+			border: 2px solid #00B5FF;
+		}
+		.comma .beer, .comma .wine {
+			border: 2px solid #00B5FF;
+		}
+		.decendant #liqour li {
+			border: 2px solid #00B5FF;
+		}
+		.directChild #liqour > li  {
+			border: 2px solid #00B5FF;
+		}
+		.adjacent .beer + li {
+			border: 2px solid #00B5FF;
+		}
+		.sibling .beer ~ li {
+			border: 2px solid #00B5FF;
+		}
+		.attr span[title] {
+			border: 2px solid #00B5FF;
+		}
+		.specAttr span[title="beer"] {
+			border: 2px solid #00B5FF;
+		}
+		.regExpress span[title*="liq"] {
+			border: 2px solid #00B5FF;
+		}
+		.beforeAfter .jameson {
+			position:relative;
+			border: 2px solid #00B5FF;
+		}
+		.beforeAfter .jameson:before {
+			content:"Oh ";
+			background:green;
+			color:#fff;
+			border-radius:10px;
+		}
+		.beforeAfter .jameson:after {
+			content:", I heart you.";
+			position:absolute;
+			top:10px;
+			background:green;
+			color:#fff;
+		}
+		.negation .wine li:not(.savignon_blanc) {
+			border: 2px solid #00B5FF;
+		}
+		.nthChild .wine li:nth-child(2) {
+			border: 2px solid #00B5FF;
+		}
+		.nthLast .wine li:nth-last-child(2) {
+			border: 2px solid #00B5FF;
+		}
+		.nthType .wine li:nth-of-type(3) {
+			border: 2px solid #00B5FF;
+		}
+		.firstChild .wine li:first-child {
+			border: 2px solid #00B5FF;
+		}
+		.lastChild .wine li:last-child {
+			border: 2px solid #00B5FF;
+		}
+		span {display:block;}
+		img {
+			max-width:65px;
+			max-height:65px;
+		}
+		span > img {
+			max-width:50px;
+			max-height:50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="menu">
+			<h3 style="color:#000;font-weight:bold;">CSS Selectors</h3>
+			<div id="showHTML">Show HTML</div><br><br>
+			<span style="color:#000;font-weight:bold;">(V4): IE 8+</span>
+			<ul>
+				<li data-type="everything" class="tooltip">
+				    <i>*</i>
+				    <span>
+				        <div><strong>Everything Selector</strong></div><br />
+				        <div>This will target every single element.</div><br>
+				        <div><strong>Example:</strong> *</div>
+				    </span>
+				</li>
+				<li data-type="identifier" class="tooltip">
+				    <i>#X</i>
+				    <span>
+				        <div><strong>ID Selector</strong></div><br />
+				        <div>This will target element&apos;s by the id attribute.</div><br>
+				    	<div><strong>Example</strong>:<br> #yeungling</div>
+				    </span>
+				</li>
+				<li data-type="collection" class="tooltip">
+				    <i>.X</i>
+				    <span>
+				        <div><strong>Class Selector</strong><br /></div><br>
+				        <div>This will target element&apos;s by the class attribute.</div><br>
+				    	<div><strong>Example</strong>:<br> .water</div>
+				    </span>
+				</li>
+				<li data-type="elem" class="tooltip">
+				    <i>X</i>
+				    <span>
+				        <div><strong>Element Selector</strong><br /></div><br>
+				        <div>This will style a specific element type. Example: span, div, i, a</div><br>
+				    	<div><strong>Example</strong>:<br> ul</div>
+				    </span>
+				</li>
+				<li data-type="comma" class="tooltip">
+				    <i>X, Y</i>
+				    <span>
+				        <div><strong>Multiple Selector</strong><br /></div><br>
+				        <div>This will declare multiple selectors.</div><br>
+				    	<div><strong>Example</strong>:<br> .beer, .wine</div>
+				    </span>
+				</li>
+				<li data-type="decendant" class="tooltip">
+				    <i>X Y</i>
+				    <span>
+				        <div><strong>Descendant Selector</strong><br /></div><br>
+				        <div>This will style all Y elements inside of an X element.</div><br>
+				    	<div><strong>Example</strong>:<br>  #liqour li</div>
+				    </span>
+				</li>
+				<li data-type="directChild" class="tooltip">
+				    <i>X > Y</i>
+				    <span>
+				        <div><strong>Direct Child Selector</strong><br /></div><br>
+				        <div>This will only select direct children.</div><br>
+				    	<div><strong>Example</strong>:<br> #liqour > li</div>
+				    </span>
+				</li>
+				<li data-type="adjacent" class="tooltip">
+				    <i>X + Y</i>
+				    <span>
+				        <div><strong>Adjacent Selector</strong><br /></div><br>
+				        <div>This will select the only element that is immediately preceded by the former element. Basically, it will get it&apos;s direct sibling.</div><br>
+				    	<div><strong>Example</strong>:<br> .beer + li</div>
+				    </span>
+				</li>
+				<li data-type="sibling" class="tooltip">
+				    <i>X ~ Y</i>
+				    <span>
+				        <div><strong>Sibling Combinator Selector</strong><br /></div><br>
+				        <div>This is similar to the Adjacent Selector, but less strict. This will get any matching siblings.</div><br>
+				    	<div><strong>Example</strong>:<br> .beer ~ li</div>
+				    </span>
+				</li>
+				<li data-type="attr" class="tooltip">
+				    <i>X[title]</i>
+				    <span>
+				        <div><strong>Attributes Selector</strong><br /></div><br>
+				        <div>This will select any element with the attribute defined.</div><br>
+				    	<div><strong>Example</strong>:<br> span[title]</div>
+				    </span>
+				</li>
+				<li data-type="specAttr" class="tooltip">
+				    <i>X[href="foo"]</i>
+				    <span>
+				        <div><strong>More specific Attributes Selector</strong><br /></div><br>
+				        <div>This will select any element with the attribute value defined.</div><br>
+				    	<div><strong>Example</strong>:<br> span[title="beer"]</div>
+				    </span>
+				</li>
+				<li data-type="regExpress" class="tooltip">
+				    <i>X[href*="foo"]</i>
+				    <span>
+				        <div><strong>Regular Expression Attributes Selector</strong><br /></div><br>
+				        <div>This will select any element with the attribute value that contains "foo".</div><br>
+				    	<div><strong>Example</strong>:<br> span[title*="liq"]</div>
+				    </span>
+				</li>
+				<li data-type="beforeAfter" class="tooltip">
+				    <i>X:after, X:before</i>
+				    <span>
+				        <div><strong>Before and After Pseudo Elements</strong><br /></div><br>
+				        <div>These selectors use the "content" css property to add content to an element.</div><br>
+				    	<div><strong>Example</strong>:<br> 
+					    	<pre>.jameson:before {
+	content:"Oh ";
+	background:green;
+	color:#fff;
+	border-radius:10px;
+}
+.jameson:after {
+	content:", I heart you.";
+	position:absolute;
+	top:10px;
+	background:green;
+	color:#fff;
+}
+							</pre>
+						</div>
+				    </span>
+				</li>
+			</ul>
+			<span style="color:#000;font-weight:bold;">(V5) IE 9+</span>
+			<ul>
+				<li data-type="negation" class="tooltip">
+				    <i>X:not(selector)</i>
+				    <span>
+				        <div><strong>Negation Pseudo Element</strong><br /></div><br>
+				        <div>This will select every element EXCEPT for the selector defined in the parenthesis.</div><br>
+				    	<div><strong>Example</strong>:<br> .wine li:not(.savignon_blanc)</div>
+				    </span>
+				</li>
+				<li data-type="nthChild" class="tooltip">
+				    <i>X:nth-child(n)</i>
+				    <span>
+				        <div><strong>nth-child Selector</strong><br /></div><br>
+				        <div>This will select the nth element in a selector. It takes numbers as values.</div><br>
+				    	<div><strong>Example</strong>:<br> .wine li:nth-child(2)<br><br><strong>Or use the following to get every 2nd element:</strong><br>.wine li:nth-child(2n)</div>
+				    </span>
+				</li>
+				<li data-type="nthLast" class="tooltip">
+				    <i>X:nth-last-child(n)</i>
+				    <span>
+				       <div> <strong>nth-last-child Selector</strong><br /></div><br>
+				       <div> This will select the nth element from the end of a selector. It takes numbers as values.</div><br>
+				    	<div><strong>Example</strong>:<br> .wine li:nth-last-child(2)</div>
+				    </span>
+				</li>
+				<li data-type="nthType" class="tooltip">
+				    <i>X:nth-of-type(n)</i>
+				    <span>
+				        <div><strong>nth-of-type Selector</strong><br /></div><br>
+				        <div>This will select the nth element of the selector type. It takes numbers as values.</div><br>
+				    	<div><strong>Example</strong>:<br> .wine li:nth-of-type(3)</div>
+				    </span>
+				</li>
+				<li data-type="firstChild" class="tooltip">
+				    <i>X:first-child</i>
+				    <span>
+				        <div><strong>first-child Selector</strong><br /></div><br>
+				        <div>This targets only the first child of the element's parent. </div><br>
+				    	<div><strong>Example</strong>:<br> .wine li:first-child</div>
+				    </span>
+				</li>
+				<li data-type="lastChild" class="tooltip">
+				    <i>X:last-child</i>
+				    <span>
+				        <div><strong>last-child Selector</strong><br /></div><br>
+				        <div>This targets only the last child of the element's parent. </div><br>
+				    	<div><strong>Example</strong>:<br> .wine li:last-child</div>
+				    </span>
+				</li>
+			</ul>
+		</div>
+		<div class="stage">
+			<ul>
+				<li class="beer">
+					<span title="beer"><img src="images/beer.jpg" /></span>
+					<ul>
+						<li>
+							<span><img src="images/budlogo.jpg" /></span>
+							<ul>
+								<li><img src="images/budlight.jpg" /></li>
+								<li><img src="images/budweiser.jpg" /></li>
+								<li><img src="images/budselect.png" /></li>
+								<li><img src="images/budlime.jpg" /></li>
+								<li><img src="images/budplatinum.jpg" /></li>
+							</ul>
+						</li>
+						<li>
+							<span><img src="images/coorslogo.jpg" /></span>
+							<ul>
+								<li class="water"><img src="images/coorslight.jpg" /></li>
+								<li class="water"><img src="images/coorsbanquet.png" /></li>
+							</ul>
+						</li>
+						<li>
+							<span id="yeungling"><img src="images/yuengling.png" /></span>
+							<ul>
+								<li><img src="images/yuenglinglight.jpg" /></li>
+								<li><img src="images/yuenglinglager.jpg" /></li>
+								<li><img src="images/yuenglingblackandtan.jpg" /></li>
+								<li><img src="images/yuenglingporter.jpg" /></li>
+								<li><img src="images/yuenglingpremium.png" /></li>
+							</ul>
+						</li>
+						<li>
+							<span><img src="images/millerlogo.png" /></span>
+							<ul>
+								<li class="water"><img src="images/millerlite.jpg" /></li>
+								<li class="water"><img src="images/millerhighlife.png" /></li>
+								<li class="water"><img src="images/miller64.jpg" /></li>
+								<li><img src="images/millerfortune.png" /></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="wine">
+					<span title="wine"><img src="images/wine.jpg" /></span>
+					<ul>
+						<li class="pinot_noir"><img src="images/DomaineSerene.jpg" /></li>
+						<li class="riesling"><img src="images/TheWallflower.jpg" /></li>
+						<li class="savignon_blanc"><img src="images/StrawMan.jpg" /></li>
+						<li class="merlot"><img src="images/MalpasRoad.jpg" /></li>
+						<li class="savignon_blanc"><img src="images/Houdini.jpg" /></li>
+						<li class="savignon_blanc"><img src="images/TheInfamousGoose.jpg" /></li>
+						<li class="pinot_noir"><img src="images/CupidsArrow.jpg" /></li>
+					</ul>
+				</li>
+				<li>
+					<span title="liqour"><img src="images/liqour.jpg" /></span>
+					<ul id="liqour">
+						<li>
+							<span>Rum</span>
+							<ul>
+								<li><img src="images/privatestock.jpg" /></li>
+								<li><img src="images/bacardigold.jpg" /></li>
+								<li><img src="images/sailorjerry.jpg" /></li>
+							</ul>
+						</li>
+						<li>
+							<span>Vodka</span>
+							<ul>
+								<li><img src="images/absolute.jpg" /></li>
+								<li><img src="images/greygoose.gif" /></li>
+								<li><img src="images/Belvedere.jpg" /></li>
+							</ul>
+						</li>
+						<li>
+							<span>Whiskey</span>
+							<ul>
+								<li><img src="images/JackDaniels.jpg" /></li>
+								<li class="jameson"><img src="images/Jameson.png" /></li>
+								<li><img src="images/JimBeam.jpg" /></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="displayCode">
+			<pre>
+&lt;div class="stage"&gt;
+    &lt;ul&gt;
+        &lt;li class="beer"&gt;
+            &lt;span title="beer"&gt;&lt;img src="images/beer.jpg" /&gt;&lt;/span&gt;
+            &lt;ul&gt;
+                &lt;li&gt;
+                    &lt;span&gt;&lt;img src="images/budlogo.jpg" /&gt;&lt;/span&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;img src="images/budlight.jpg" /&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;img src="images/budweiser.jpg" /&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;img src="images/budselect.png" /&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;img src="images/budlime.jpg" /&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;img src="images/budplatinum.jpg" /&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;span&gt;&lt;img src="images/coorslogo.jpg" /&gt;&lt;/span&gt;
+                    &lt;ul&gt;
+                        &lt;li class="water"&gt;&lt;img src="images/coorslight.jpg" /&gt;&lt;/li&gt;
+                        &lt;li class="water"&gt;&lt;img src="images/coorsbanquet.png" /&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;span id="yeungling"&gt;&lt;img src="images/yuengling.png" /&gt;&lt;/span&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;img src="images/yuenglinglight.jpg" /&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;img src="images/yuenglinglager.jpg" /&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;img src="images/yuenglingblackandtan.jpg" /&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;img src="images/yuenglingporter.jpg" /&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;img src="images/yuenglingpremium.png" /&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;span&gt;&lt;img src="images/millerlogo.png" /&gt;&lt;/span&gt;
+                    &lt;ul&gt;
+                        &lt;li class="water"&gt;&lt;img src="images/millerlite.jpg" /&gt;&lt;/li&gt;
+                        &lt;li class="water"&gt;&lt;img src="images/millerhighlife.png" /&gt;&lt;/li&gt;
+                        &lt;li class="water"&gt;&lt;img src="images/miller64.jpg" /&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;img src="images/millerfortune.png" /&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class="wine"&gt;
+            &lt;span title="wine"&gt;&lt;img src="images/wine.jpg" /&gt;&lt;/span&gt;
+            &lt;ul&gt;
+                &lt;li class="pinot_noir"&gt;&lt;img src="images/DomaineSerene.jpg" /&gt;&lt;/li&gt;
+                &lt;li class="riesling"&gt;&lt;img src="images/TheWallflower.jpg" /&gt;&lt;/li&gt;
+                &lt;li class="savignon_blanc"&gt;&lt;img src="images/StrawMan.jpg" /&gt;&lt;/li&gt;
+                &lt;li class="merlot"&gt;&lt;img src="images/MalpasRoad.jpg" /&gt;&lt;/li&gt;
+                &lt;li class="savignon_blanc"&gt;&lt;img src="images/Houdini.jpg" /&gt;&lt;/li&gt;
+                &lt;li class="savignon_blanc"&gt;&lt;img src="images/TheInfamousGoose.jpg" /&gt;&lt;/li&gt;
+                &lt;li class="pinot_noir"&gt;&lt;img src="images/CupidsArrow.jpg" /&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;span title="liqour"&gt;&lt;img src="images/liqour.jpg" /&gt;&lt;/span&gt;
+            &lt;ul id="liqour"&gt;
+                &lt;li&gt;
+                    &lt;span&gt;Rum&lt;/span&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;img src="images/privatestock.jpg" /&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;img src="images/bacardigold.jpg" /&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;img src="images/sailorjerry.jpg" /&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;span&gt;Vodka&lt;/span&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;img src="images/absolute.jpg" /&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;img src="images/greygoose.gif" /&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;img src="images/Belvedere.jpg" /&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;span&gt;Whiskey&lt;/span&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;img src="images/JackDaniels.jpg" /&gt;&lt;/li&gt;
+                        &lt;li class="jameson"&gt;&lt;img src="images/Jameson.png" /&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;img src="images/JimBeam.jpg" /&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+			</pre>
+		</div>
+	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>
+	$('.tooltip').on('click', function(){
+		$('.menu').find('ul li').css('background','none');
+		$(this).css('background','#00B5FF');
+		var type = $(this).data('type');
+		$('.stage').attr('class','stage').addClass(type);
+	})
+	var hide = true;
+	$('#showHTML').on('click',function(){
+		if(hide){
+			$('.stage').hide();
+			$('.displayCode').show();
+			$(this).html('Hide HTML');
+			hide = false;
+		} else {
+			$('.displayCode').hide();
+			$('.stage').show();
+			$(this).html('Show HTML');
+			hide = true;
+		}
+	})
+	</script>
+</body>
+</html>
